@@ -11,7 +11,7 @@
 </p>
 <h2>How to play:</h2>
 <p>
-First, you will see "Press ENTER to play",  Hit the ENTER button when you are ready to react.
+First, you will see "Press ENTER to play".  Hit the ENTER button when you are ready to react.
 When you see "get set...", be ready to hit the ENTER key when "GO" is printed.
 After, it will show you the time difference between when "GO" is printed and when you react.
 </p>

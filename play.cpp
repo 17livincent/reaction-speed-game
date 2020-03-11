@@ -1,4 +1,3 @@
-// terminal-based reaction speed game
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -6,20 +5,23 @@
 #include <time.h>
 #include <thread>
 
-#include "game.h"
+#include "reactionspeedgame.h"
 
 
 int main(int argc, char** argv) {
     Game game;
     short ready;
     short react;
+    
+    game.setMIN_WAIT(1);
+    game.setRANGE_WAIT(5);
 
     while(1) {
         // get waiting time before anything else
         game.setWaitingTime(game.createWaitingTime());
 
         // print instructions
-        cout << "Press ENTER when ready" << endl;
+        cout << endl << "Press ENTER when ready" << endl;
 
         // wait for play to be ready
         ready = game.playerReaction();
@@ -30,7 +32,7 @@ int main(int argc, char** argv) {
         // start timer
         game.startTimer();
         // print GO after waiting time is finished
-        cout << "GO" << endl;
+        cout << "########## GO ##########" << endl;
 
         // get time of player reaction
         ready = game.playerReaction();
@@ -40,7 +42,11 @@ int main(int argc, char** argv) {
         game.setReactionTime();
     
         // print resulting time
-        cout << game.getReactionTime().count() << endl;
+        cout << "Reaction time: " << game.getReactionTime().count() << endl;
+
+        // show avg
+        game.setAvg(game.getReactionTime());
+        cout << "Avg: (" << game.getIterations() << ") " << game.getAvg().count() << endl;
     }
     
 }

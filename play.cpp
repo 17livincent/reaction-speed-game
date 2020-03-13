@@ -1,14 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <iostream>
-#include <chrono>
-#include <time.h>
-#include <thread>
-
 #include "reactionspeedgame.h"
 
+using namespace std;
 
 int main(int argc, char** argv) {
+    // game
     Game game;
     short ready;
     short react;
@@ -48,5 +43,6 @@ int main(int argc, char** argv) {
         game.setAvg(game.getReactionTime());
         cout << "Avg: (" << game.getIterations() << ") " << game.getAvg().count() << endl;
     }
-    
+
+    return 0;
 }

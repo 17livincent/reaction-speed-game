@@ -2,12 +2,12 @@
   This is a command-line-based reaction speed game written in C++.
 </p>
 <p>
-  game.h includes all of the function definitions and parameters.  
-  game.cpp merely uses the code from game.h.  The goal was to have as little unique code in game.cpp as possible.
+  reactionspeedgame.h includes all of the function definitions and parameters.  
+  play.cpp merely uses the code from reactionspeedgame.h.  That file is the most important.
 </p>
 <h2>To use:</h2>
 <p>
-  Compile play.cpp with g++ (g++ play.cpp) and run the executable.
+  Use the makefile to create the executable <code>play</code>.
 </p>
 <h2>How to play:</h2>
 <p>
